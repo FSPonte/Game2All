@@ -1,11 +1,4 @@
-id,email,username,pw_hash,created_at,updated_at,name
-1,fsponte@outlook.com,fsponte,1234567890,2025-10-13 11:10:28,2025-10-14 15:16:58,Francisco Ponte
-2,rafael_cabral@gmail.com,rafaelsqq,0987654321,2025-10-13 11:12:20,2025-10-14 15:17:35,Rafael Cabral
-3,fc63810@alunos.fc.ul.pt,Teresa,7256592627,2025-10-13 11:24:26,2025-10-13 11:24:26,NULL
-4,fc56620@alunos.fc.ul.pt,Pinto,7385529457,2025-10-13 11:24:55,2025-10-14 15:17:51,Miguel da Vodka
-7,h.farinha@aol.com,Farinha,7385529457,2025-10-13 11:27:25,2025-10-13 11:27:25,NULL
-8,edu.pereira@hotmail.com,Eduardo,7294729484,2025-10-13 11:27:25,2025-10-13 11:27:25,NULL
-9,ruiponte@msim.pt,RPonte,9873128534jnf,2025-10-13 11:31:20,2025-10-13 11:31:20,NULL
-10,mponte@gmail.com,Manuela Ponte,dsaidhfdsfdsg,2025-10-13 11:31:20,2025-10-13 11:31:20,NULL
-11,hnunes@gmail.com,hnnunes,hdewucec38c34,2025-10-13 11:31:20,2025-10-13 11:31:20,NULL
-12,anamsilvestre@gmail.com,Ana Silvestre,73hdu2uwndiu2,2025-10-13 13:31:56,2025-10-13 13:31:56,NULL
+id,username,password,created_at,updated_at,name,email
+1,fsponte,621ekldfv,2025-10-15 15:03:26,2025-10-15 15:03:26,NULL,NULL
+2,rafaelsqq,483yr9238rfijv,2025-10-15 15:03:26,2025-10-15 15:03:26,NULL,NULL
+3,hnnunes,891jeom,2025-10-15 15:03:26,2025-10-15 15:03:26,NULL,NULL
