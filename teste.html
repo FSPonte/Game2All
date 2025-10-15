@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game2All</title>
+
+  <!-- Ligação ao CSS interno -->
+  <style>
+    /* 🔹 Reset básico para evitar margens padrão */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+    }
+
+    /* 🔹 Barra de navegação */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      background-color: #222;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      box-sizing: border-box;
+    }
+
+    header nav {
+      display: flex;
+      gap: 30px;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
+
+    header nav a:hover {
+      color: #00ff88;
+    }
+
+    /* 🔹 Área principal */
+    main {
+      margin-top: 100px; /* espaço abaixo do header fixo */
+      padding: 20px;
+    }
+
+    /* 🔹 Estilo das imagens */
+    .jogo {
+      border: 2px solid green;
+      border-radius: 100px;
+      width: 500px;
+      height: 100px;
+      display: block;
+      margin: 40px auto 10px auto; /* centraliza horizontalmente */
+    }
+
+    /* 🔹 Legenda dos jogos */
+    .legenda {
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 🔹 Cabeçalho com links -->
+  <header>
+    <div class="logo">Game2All</div>
+    <nav>
+      <a href="html.html">Descobrir</a>
+      <a href="#">Grupos</a>
+      <a href="#">Criar grupo</a>
+      <a href="#">Perfil</a>
+    </nav>
+  </header>
+
+  <!-- 🔹 Conteúdo principal -->
+  <main>
+    <img src="foto.png" alt="Jogo de 7vs7" class="jogo">
+    <p class="legenda">Jogo de 7vs7</p>
+
+    <img src="fotos.png" alt="Jogo de 5vs5" class="jogo">
+    <p class="legenda">Jogo de 5vs5</p>
+  </main>
+
+</body>
+</html>
