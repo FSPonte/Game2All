@@ -1,5 +1,6 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST")
+{
 	// Get form data
 	$name = htmlspecialchars(trim($_POST['name']));
 	$email = htmlspecialchars(trim($_POST['email']));
@@ -9,26 +10,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	// Validation
 	$errors = [];
 
-	if (empty($name)) {
+	if (empty($name))
 		$errors[] = "Name is required";
-	}
 
-	if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+	if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL))
 		$errors[] = "Valid email is required";
-	}
 
-	if (empty($subject)) {
+	if (empty($subject))
 		$errors[] = "Subject is required";
-	}
 
-	if (empty($message)) {
+	if (empty($message))
 		$errors[] = "Message is required";
-	}
 
 	// If no errors, save to file
-	if (empty($errors)) {
+	if (empty($errors))
+	{
 		// Create data array
-		$submission = [
+		$submission =
+		[
 			'timestamp' => date('Y-m-d H:i:s'),
 			'name' => $name,
 			'email' => $email,
@@ -43,21 +42,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		// Save to file
 		$filename = 'submissions.txt';
 		
-		if (file_put_contents($filename, $data, FILE_APPEND | LOCK_EX)) {
+		if (file_put_contents($filename, $data, FILE_APPEND | LOCK_EX))
+		{
 			// Success - redirect to success page
 			header("Location: index.php?success=1");
 			exit();
-		} else {
+		}
+		else
+		{
 			// Error saving file
 			header("Location: index.php?error=1");
 			exit();
 		}
-	} else {
+	}
+	else
+	{
 		// Validation errors
 		header("Location: index.php?error=1");
 		exit();
 	}
-} else {
+}
+else
+{
 	// If not POST request, redirect to form
 	header("Location: index.php");
 	exit();
