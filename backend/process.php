@@ -2,10 +2,10 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST")
 {
 	// Get form data
-	$name = htmlspecialchars(trim($_POST['name']));
-	$email = htmlspecialchars(trim($_POST['email']));
-	$subject = htmlspecialchars(trim($_POST['subject']));
-	$message = htmlspecialchars(trim($_POST['message']));
+	$name = htmlspecialchars(trim($_POST["name"]));
+	$email = htmlspecialchars(trim($_POST["email"]));
+	$subject = htmlspecialchars(trim($_POST["subject"]));
+	$message = htmlspecialchars(trim($_POST["message"]));
 
 	// Validation
 	$errors = [];
@@ -28,19 +28,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 		// Create data array
 		$submission =
 		[
-			'timestamp' => date('Y-m-d H:i:s'),
-			'name' => $name,
-			'email' => $email,
-			'subject' => $subject,
-			'message' => $message,
-			'ip_address' => $_SERVER['REMOTE_ADDR'] ?? 'Unknown'
+			"timestamp" => date("Y-m-d H:i:s"),
+			"name" => $name,
+			"email" => $email,
+			"subject" => $subject,
+			"message" => $message,
+			"ip_address" => $_SERVER["REMOTE_ADDR"] ?? "Unknown"
 		];
 
 		// Convert to JSON
 		$data = json_encode($submission) . PHP_EOL;
 
 		// Save to file
-		$filename = 'submissions.txt';
+		$filename = "submissions.json";
 		
 		if (file_put_contents($filename, $data, FILE_APPEND | LOCK_EX))
 		{
