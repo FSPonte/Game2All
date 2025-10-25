@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New';
+}
+
+
+
+
+body {
+    background-image: linear-gradient(180deg, #0d7b36 0%, #107d3b 100%);
+}
+
+.navebar{
+    font-size: 30px;
+    display:flex;
+}
+
+.links{
+    text-align: right;
+}
+
+
+   
+p{
+    font-size: 40px;
+    text-align: center;
+}
+
+.centro{
+    display: flex;
+    justify-content: center;
+}

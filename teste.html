@@ -3,96 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Game2All</title>
-
-  <!-- Ligação ao CSS interno -->
-  <style>
-    /* 🔹 Reset básico para evitar margens padrão */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #fafafa;
-    }
-
-    /* 🔹 Barra de navegação */
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 50px;
-      background-color: #222;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 40px;
-      box-sizing: border-box;
-    }
-
-    header nav {
-      display: flex;
-      gap: 30px;
-    }
-
-    header nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.2s;
-    }
-
-    header nav a:hover {
-      color: #00ff88;
-    }
-
-    /* 🔹 Área principal */
-    main {
-      margin-top: 100px; /* espaço abaixo do header fixo */
-      padding: 20px;
-    }
-
-    /* 🔹 Estilo das imagens */
-    .jogo {
-      border: 2px solid green;
-      border-radius: 100px;
-      width: 500px;
-      height: 100px;
-      display: block;
-      margin: 40px auto 10px auto; /* centraliza horizontalmente */
-    }
-
-    /* 🔹 Legenda dos jogos */
-    .legenda {
-      text-align: center;
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-  </style>
+  <title>Futebol Matchmaker</title>
+  <link rel="stylesheet" href="teste.css">
+  <script defer src="script.js"></script>
 </head>
-
 <body>
 
-  <!-- 🔹 Cabeçalho com links -->
-  <header>
-    <div class="logo">Game2All</div>
-    <nav>
-      <a href="html.html">Descobrir</a>
-      <a href="#">Grupos</a>
-      <a href="#">Criar grupo</a>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">⚽ FutebolMatch</div>
+    <nav class="menu">
+      <a href="#descobrir">Descobrir</a>
+      <a href="#grupos">Grupos</a>
+      <a href="#">Criar Grupo</a>
       <a href="#">Perfil</a>
     </nav>
   </header>
 
-  <!-- 🔹 Conteúdo principal -->
-  <main>
-    <img src="nunes.png" alt="Jogo de 7vs7" class="jogo">
-    <p class="legenda">Jogo de 7vs7</p>
+  <!-- Seção principal -->
+  <section class="hero">
+    <h1>Conecte-se com <span>Jogadores de Futebol</span></h1>
+    <p>Descubra jogadores próximos com cartas estilo FIFA, crie grupos e encontre o match perfeito para o seu time. É como Tinder, mas para futebol! ⚽</p>
 
-    <img src="ponte.png" alt="Jogo de 5vs5" class="jogo">
-    <p class="legenda">Jogo de 5vs5</p>
-  </main>
+    <div class="buttons">
+      <a href="#descobrir" class="btn discover">🔍 Descobrir Jogadores</a>
+      <a href="#grupos" class="btn create">👥 Criar Grupo</a>
+    </div>
+  </section>
+
+  <!-- Seção de jogadores -->
+  <section id="descobrir" class="players-section">
+    <h2>Jogadores em Destaque</h2>
+
+    <div class="players-container">
+      <!-- Carta 1 -->
+      <div class="player-card">
+        <img src="https://i.imgur.com/Z6h7nch.png" alt="Jogador 1">
+        <h3>Ronaldo Silva</h3>
+        <p class="position">Atacante ⚡</p>
+        <div class="stats">
+          <p>VEL: 93</p>
+          <p>CHU: 89</p>
+          <p>PAS: 84</p>
+          <p>DEF: 42</p>
+          <p>FOR: 80</p>
+        </div>
+      </div>
+
+      <!-- Carta 2 -->
+      <div class="player-card">
+        <img src="https://i.imgur.com/3wT7VhX.png" alt="Jogador 2">
+        <h3>Lucas Pereira</h3>
+        <p class="position">Meio-campo 🎯</p>
+        <div class="stats">
+          <p>VEL: 82</p>
+          <p>CHU: 75</p>
+          <p>PAS: 90</p>
+          <p>DEF: 65</p>
+          <p>FOR: 78</p>
+        </div>
+      </div>
+
+      <!-- Carta 3 -->
+      <div class="player-card">
+        <img src="https://i.imgur.com/0r3s5Gz.png" alt="Jogador 3">
+        <h3>Thiago Costa</h3>
+        <p class="position">Zagueiro 🛡️</p>
+        <div class="stats">
+          <p>VEL: 68</p>
+          <p>CHU: 55</p>
+          <p>PAS: 70</p>
+          <p>DEF: 91</p>
+          <p>FOR: 88</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
