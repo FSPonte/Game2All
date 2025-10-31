@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+.foto{
+  margin-top: 100px;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  width: 300px;
+}
+
+
+.foto img{
+  margin-top: 100px;
+
+}
+
+.foto figcaption{
+  width: 100%;
+  background-color: rgb(19, 95, 19);
+  text-align: left;
+}
+
+
