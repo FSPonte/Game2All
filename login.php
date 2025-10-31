@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 		if (file_put_contents($filename, $data, FILE_APPEND | LOCK_EX))
 		{
 			// Success - redirect to success page
-			header("Location: teste.html");
+			header("Location: Game2All.html");
 			exit();
 		}
 		else
