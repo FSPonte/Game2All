@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 		$data = json_encode($submission).PHP_EOL;
 
 		// Save to file
-		$filename = "login_submissions.json";
+		$filename = "submissions.json";
 		
 		if (file_put_contents($filename, $data, FILE_APPEND | LOCK_EX))
 		{
