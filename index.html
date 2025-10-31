@@ -1,52 +1,39 @@
 <!DOCTYPE html>
-<html lang = "en">
-
+<html lang="pt-br">
 <head>
-	<meta charset = "UTF-8">
-	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-	<title>
-		Contact Form
-	</title>
-	<link rel = "stylesheet" href = "style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="imagens/bola.ico" type="image/x-icon">
+    <title>Game2All</title>
+    <link rel="stylesheet" href="Game2All.css">
 </head>
 
+
 <body>
-	<div class = "container">
-		<h1>
-			Login
-		</h1>
-		
-		<?php if (isset($_GET["success"])): ?>
-			<div class = "alert success">
-				Logged in.
-			</div>
-		<?php endif; ?>
 
-		<?php if (isset($_GET["error"])): ?>
-			<div class = "alert error">
-				Sorry, there was an error logging in. Please try again.
-			</div>
-		<?php endif; ?>
+    <header class="navebar">
+        <h1><a href="Game2All.html">Game2All</a></h1>
+        <section class="links">
+        <a href="descobrir.html">Descobrir</a>
+        <a href="Grupos.html">Grupos</a>
+        <a href="criar_grupos.html">criar grupos</a>
+        <a href="perfil.html">Perfil</a>
+        </section> 
+    </header>
 
-		<form action = "login.php" method = "POST">
-			<div class = "form-group">
-				<label for = "username">
-					Username:
-				</label>
-				<input type = "text" id = "username" name = "username" required>
-			</div>
+    <main>
+        <header class="inicio">
+            <h1>Conecte-se com jogadores de futebol</h1>
+            
+            <p style="font-size: 15px; color: white;">
+                Descubra jogadores próximos com cartas estilo FIFA, crie grupos e encontre o match perfeito para seu time. É como Tinder, mas para futebol!
+            </p>
+        </header>
 
-			<div class = "form-group">
-				<label for = "password">
-					Password:
-				</label>
-				<input type = "password" id = "password" name = "password" required>
-			</div>
-
-			<button type = "submit" class = "btn">
-				Login
-			</button>
-		</form>
-	</div>
+    </main>
 </body>
+
+   
+
 </html>
