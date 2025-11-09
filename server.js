@@ -6,20 +6,17 @@ import cors from "cors";
 
 dotenv.config({ override: true });
 
-const app = express();
-app.use(express.json());
-app.use(cors());
-
-
 const db = mysql.createConnection({ 
 	host: process.env.DB_HOST,
 	user: process.env.DB_USER,
-	password: process.env.DB_PWD,
+	password: process.env.DB_PASSWORD,
 	database: process.env.DB_NAME
 });
 
-console.log("DB connection config:", {
+console.log("Database config:", {
 	host: process.env.DB_HOST,
+	user: process.env.DB_USER,
+	password: process.env.DB_PASSWORD,
 	database: process.env.DB_NAME,
 });
 
@@ -30,6 +27,10 @@ db.connect(err => {
 	else
 		console.log("Connected to MySQL database");
 });
+
+const app = express();
+app.use(express.json());
+app.use(cors());
 
 // Print
 app.get("/", (req, res) => {
